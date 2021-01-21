@@ -2,9 +2,23 @@
 
 <head>
     <script>
+        zet = 0
+        function doe_zet(x, y) {
+            if (zet == 0) {
+                van(x, y);
+                zet = 1;
+            } else if (zet == 1) {
+                naar(x, y);
+                zet = 0;
+            }
+        }
         function van(x, y) {
             document.getElementById('x1').value = x;
             document.getElementById('y1').value = y;
+        }
+        function naar(x, y) {
+            document.getElementById('x2').value = x;
+            document.getElementById('y2').value = y;
         }
     </script>
 </head>
@@ -14,7 +28,7 @@
 
     <table border="1">
         <tr style="height: 40px; margin: 0px; border: 1px; padding: 0px;">
-            <td style="width: 40px; margin: 0px; border: 1px; padding: 0px;" onclick="van(1, 8);"></td>
+            <td style="width: 40px; margin: 0px; border: 1px; padding: 0px;" onclick="doe_zet(1, 8);"></td>
             <td style="width: 40px; margin: 0px; border: 1px; padding: 0px; background-color: grey;"></td>
             <td style="width: 40px; margin: 0px; border: 1px; padding: 0px;"></td>
             <td style="width: 40px; margin: 0px; border: 1px; padding: 0px; background-color: grey;"></td>
