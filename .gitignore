@@ -1,2 +1,8 @@
-venv
+# cahching
 __pycache__
+
+# virtual envioronment
+venv
+
+# database
+zetten.*

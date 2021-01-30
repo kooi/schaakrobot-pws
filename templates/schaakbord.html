@@ -109,9 +109,12 @@
         </tr>
     </table>
 
-    <!-- TODO:
-        <h3>Vorige zetten</h3>
-    -->
+    <h3>Vorige zetten</h3>
+    <ol>
+        {% for zet in zetten %}
+        <li>{{key_x[zet.x1]}}{{zet.y1}}-{{key_x[zet.x2]}}{{zet.y2}}</li>
+        {% endfor %}
+    </ol>
 
     <h3>Doe een zet</h3>
 
